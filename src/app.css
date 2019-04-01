@@ -63,7 +63,8 @@ nav a {
   color: black;
   font-size: 30px;
   line-height: 1;
-  padding: 4vh 10vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
   margin: auto;
   text-align: left;
   width: 500px;

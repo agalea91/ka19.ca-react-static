@@ -1,6 +1,7 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 import bgImg1 from '../../public/whistler_climb.jpg'
+import bgImg3 from '../../public/ka_white.png'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
 
@@ -65,27 +66,34 @@ const InnerCard = styled.div`
 `
 
 export default withSiteData(() => (
-  <div className="main-div">
-    <div className="bg-banner bg-white"></div>
-    <div className="text-title">
-      <p className="text-title-1">
-        K&amp;A
-      </p>
-      <p className="text-title-2">
-        2019 | &infin;
-      </p>
+  <div className="wrapper">
+    <div className="main-div">
+      <div className="bg-banner bg-white"></div>
+      <div className="text-title">
+        <p className="text-title-1">
+          K&amp;A
+        </p>
+        <p className="text-title-2">
+          2019 | &infin;
+        </p>
+      </div>
+      <img className="bg-1" id="homepage-bg-img-1" src={bgImg1} alt=""></img>
+      <div className="bg-2">
+        <div className="padded-div">
+          <Cards>
+            <LinkCard to="/wedding">
+              <InnerCard>Wedding 👰</InnerCard>
+            </LinkCard>
+            <Card href="https://kavacay.wordpress.com/" target="_blank" >
+              <InnerCard>Vacay 🌴</InnerCard>
+            </Card>
+          </Cards>
+        </div>
+      </div>
     </div>
-    <img className="bg-1" id="homepage-bg-img-1" src={bgImg1} alt=""></img>
-    <div className="bg-2">
-      <div className="padded-div">
-        <Cards>
-          <LinkCard to="/wedding">
-            <InnerCard>Wedding 👰</InnerCard>
-          </LinkCard>
-          <Card href="https://kavacay.wordpress.com/" target="_blank" >
-            <InnerCard>Vacay 🌴</InnerCard>
-          </Card>
-        </Cards>
+    <div className="main-div">
+      <div className="bg-3">
+        <img id="homepage-bg-img-3" src={bgImg3} alt=""></img>
       </div>
     </div>
   </div>
