@@ -19,5 +19,5 @@ export default {
       }
     ]
   },
-  siteRoot: 'http://ka19.ca',
+  siteRoot: 'https://ka19.ca',
 }
