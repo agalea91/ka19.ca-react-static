@@ -33,9 +33,10 @@ nav a {
   align-items: center;
   justify-content: center;
   height: 100%;
+  z-index: 1;
 }
 .padded-div {
-  padding: 1vh 1vw;
+  padding: 1;
   width: 500px;
   max-width: 80%;
   margin: auto;
@@ -63,8 +64,8 @@ nav a {
   color: black;
   font-size: 30px;
   line-height: 1;
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  padding-top: 0vh;
+  padding-bottom: 0vh;
   margin: auto;
   text-align: left;
   width: 500px;
@@ -124,6 +125,7 @@ nav a {
   position: relative;
   padding: 10vh;
   margin: auto;
+
 }
 /* @media screen and (max-width: 1024px) { 
   img.bg {

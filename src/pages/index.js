@@ -1,7 +1,7 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 import bgImg1 from '../../public/whistler_climb.jpg'
-import bgImg3 from '../../public/ka_white.png'
+import bgImg3 from '../../public/rose_white.png'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
 
@@ -28,13 +28,12 @@ const Card = styled.a`
   font-weight: 100;
   font-size: 30px;
   cursor: pointer;
-  transition: 0.1s ease-out;
   white-space: nowrap;
+  transition: 2s ease-out;
   :hover {
-    transform: translate(3px, 0px);
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.5) perspective(2px);
   }
-`
+` 
 
 const LinkCard = styled(Link)`
   flex: 1 1 150px;
@@ -52,17 +51,40 @@ const LinkCard = styled(Link)`
   font-weight: 100;
   font-size: 30px;
   cursor: pointer;
-  transition: 0.1s ease-out;
   white-space: nowrap;
+  transition: 2s ease-out;
   :hover {
-    transform: translate(3px, 0px);
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.5) perspective(2px);
   }
 `
 
 const InnerCard = styled.div`
   width: 100%;
   height: 100%
+`
+
+const BgBlock = styled.div`
+  /* Size */
+  width: 100%;
+  height: ${props => props.height};
+  /* Position */
+  position: absolute;
+  top: ${props => props.top};
+  left: 0;
+`
+
+const ZoomImage = styled.img`
+  opacity: 1;
+  /* Size */
+  width: 200px;
+  height: auto;
+  /* Position */
+  position: relative;
+  padding: 10vh;
+  margin: auto;
+  transition: 2s ease-out;
+  :hover {
+    transform: scale(1.5) perspective(2px);
 `
 
 export default withSiteData(() => (
@@ -79,7 +101,7 @@ export default withSiteData(() => (
       </div>
       <img className="bg-1" id="homepage-bg-img-1" src={bgImg1} alt=""></img>
       <div className="bg-2">
-        <div className="padded-div">
+        <div className="padded-div" style={{paddingTop: "150px"}}>
           <Cards>
             <LinkCard to="/wedding">
               <InnerCard>Wedding 👰</InnerCard>
@@ -92,9 +114,13 @@ export default withSiteData(() => (
       </div>
     </div>
     <div className="main-div">
-      <div className="bg-3">
-        <img id="homepage-bg-img-3" src={bgImg3} alt=""></img>
-      </div>
+      {/* <div className="bg-3"> */}
+      <BgBlock top="170%">
+        <ZoomImage src={bgImg3} alt="" />
+      </BgBlock>
+        {/* <img id="homepage-bg-img-3" src={bgImg3} alt=""></img> */}
+      {/* </div> */}
     </div>
+    <BgBlock top="250%" height="100px"></BgBlock>
   </div>
 ))

@@ -31,17 +31,42 @@ const Card = styled.a`
   font-weight: 100;
   font-size: 30px;
   cursor: pointer;
-  transition: 0.1s ease-out;
+  transition: 2s ease-out;
   white-space: nowrap;
   :hover {
-    transform: translate(3px, 0px);
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.5) perspective(2px);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
   }
 `
 
 const InnerCard = styled.div`
   width: 100%;
   height: 100%
+`
+
+const BgBlock = styled.div`
+  /* Size */
+  width: 100%;
+  height: ${props => props.height};
+  /* Position */
+  position: absolute;
+  top: ${props => props.top};
+  left: 0;
+`
+
+const ZoomImage = styled.img`
+  opacity: 1;
+  /* Size */
+  width: 200px;
+  height: auto;
+  /* Position */
+  position: relative;
+  padding: 10vh;
+  margin: auto;
+  transition: 2s ease-out;
+  :hover {
+    transform: scale(1.5) perspective(2px);
+  }
 `
 
 export default withSiteData(() => (
@@ -59,15 +84,30 @@ export default withSiteData(() => (
         </p>
       </div>
       <img className="bg-1" id="homepage-bg-img-1" src={bgImg1} alt=""></img>
-      <div className="bg-2 bg-white">
+      <BgBlock className="bg-white" top="120%" height="100px">
+        <div className="padded-div">
+          <div className="text-body-1" style={{textAlign: "center"}}>
+            <p>
+              Welcome to our wedding page 🎉
+            </p>
+          </div>
+        </div>
+      </BgBlock>
+    </div>
+    <div className="main-div">
+      <BgBlock top="143%">
+        <ZoomImage src={bgImg3} alt="" />
+      </BgBlock>
+    </div>
+    <div className="main-div">
+      <BgBlock className="bg-white" top="200%" >
         <div className="padded-div">
           <div className="text-body-1">
             <p>
-              Hey, welcome to our wedding page! 
               We had a lot of fun typing out the invitations and look forward to celebrating with everyone this September. 
               <br/>
               <br/>
-              RSVP not available quite yet as we're still deciding on the dinner menu... please check back in a few weeks. 
+              RSVP not available quite yet as we're still deciding on the dinner menu... please check back in a few weeks.
             </p>
           </div>
           <Cards className="wedding-cards">
@@ -76,12 +116,10 @@ export default withSiteData(() => (
             </Card>
           </Cards>
         </div>
-      </div>
+      </BgBlock>
     </div>
     <div className="main-div">
-      <div className="bg-3">
-        <img id="homepage-bg-img-3" src={bgImg3} alt=""></img>
-      </div>
+      <BgBlock top="300%" height="200px"></BgBlock>
     </div>
   </div>
 ))
