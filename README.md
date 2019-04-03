@@ -33,5 +33,8 @@ Upload the new sourcec code:
 ```
 aws s3 rm s3://ka19.ca --recursive
 ```
-
+Invalidate cloudfront cache
+```
+aws cloudfront create-invalidation --distribution-id EWMA3MU5JMC40 --paths '/*'
+```
 
