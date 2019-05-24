@@ -27,11 +27,11 @@ cp dist dist-2019-04-01
 ```
 Delete the current bucket (optional):
 ```
-aws s3 rm s3://tagto.org --recursive
-```
-Upload the new sourcec code:
-```
 aws s3 rm s3://ka19.ca --recursive
+```
+Upload the new source code:
+```
+aws s3 sync --acl public-read --sse --delete dist s3://ka19.ca
 ```
 Invalidate cloudfront cache
 ```
