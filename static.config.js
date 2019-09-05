@@ -5,9 +5,9 @@ export default {
     title: 'K&amp;A | 2019 -> &#8734;',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
+//     const { data: posts } = await axios.get(
+//       'https://jsonplaceholder.typicode.com/posts'
+//     )
     return [
       {
         path: '/',
@@ -16,7 +16,11 @@ export default {
       {
         path: '/wedding',
         component: 'src/pages/wedding',
-      }
+      },
+      {
+        path: '/wedding/videos',
+        component: 'src/pages/weddingVideos',
+      },
     ]
   },
   siteRoot: 'https://ka19.ca',

@@ -119,7 +119,7 @@ export default withSiteData(() => (
                 Please arrive by 4:00 PM as the ceremony is at 4:30 PM.
               </li>
               <li>
-                Overnight parking at the venue is free. There will be shuttles running to the <a href="http://www.kitchenercambridge.hgi.com/" target="_blank">Hilton Garden Inn</a> / <a href="http://www.cambridgehotel.ca/" target="_blank">Cambridge Hotel</a> later in the night.
+                Overnight parking at the venue is allowed (until 11 AM on Saturday). There will be shuttles running to the <a href="http://www.kitchenercambridge.hgi.com/" target="_blank">Hilton Garden Inn</a> / <a href="http://www.cambridgehotel.ca/" target="_blank">Cambridge Hotel</a> later in the night.
               </li>
             </ul>
           </p>
