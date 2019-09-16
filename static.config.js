@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export default {
   getSiteData: () => ({
     title: 'K&amp;A | 2019 -> &#8734;',
