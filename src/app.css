@@ -51,8 +51,19 @@ nav a {
   color: white;
   line-height: 0.2;
 }
+.text-title-centered {
+  line-height: 0.2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .text-title-1 {
-  color: white;
+  color:white;
+  font-size: 140px;
+}
+.text-title-1-black {
+  color:black;
+  align-content: center;
   font-size: 140px;
 }
 .text-title-2 {
@@ -139,6 +150,15 @@ nav a {
   margin: auto;
 
 }
+#wedding-videos-bg-img-1 {
+  opacity: 0.8;
+}
+
+.fullscreen-photo-gallery {
+  max-width: 100%;
+  padding-top: 10px;
+}
+
 /* @media screen and (max-width: 1024px) { 
   img.bg {
     left: 50%;

@@ -21,6 +21,10 @@ export default {
         path: '/wedding/videos',
         component: 'src/pages/weddingVideos',
       },
+      {
+        path: '/wedding/bachelor',
+        component: 'src/pages/weddingBachelor',
+      },
     ]
   },
   siteRoot: 'https://ka19.ca',
